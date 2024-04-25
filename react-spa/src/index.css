@@ -1,0 +1,112 @@
+/* Overrides */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+/* Colors */
+:root {
+  --color-black: #130601;
+  --color-white: #fef1ec;
+  --color-primary: #f54814;
+  --color-secondary: #f9df72;
+  --color-accent: #f7e348;
+}
+
+html {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+.text-black {color: var(--color-black);}
+.text-white {color: var(--color-white);}
+.text-primary {color: var(--color-primary);}
+.text-secondary {color: var(--color-secondary);}
+.text-accent {color: var(--color-primary);}
+
+.bg-black {background-color: var(--color-black);}
+.bg-white {background-color: var(--color-white);}
+.bg-primary {background-color: var(--color-primary);}
+.bg-secondary {background-color: var(--color-secondary);}
+.bg-accent {background-color: var(--color-primary);}
+
+/* Spacing */
+:root {
+  --spacing-base: 4px;
+}
+
+/* Utilities */
+.flex {display: flex;}
+.flex-col {flex-direction: column;}
+.justify-center {justify-content: center;}
+.justify-between {justify-content: space-between;}
+.items-center {align-items: center;}
+.items-end {align-items: end;}
+.text-center {text-align: center;}
+
+.gap-sm {gap: calc(var(--spacing-base) * 1);}
+.gap-md {gap: calc(var(--spacing-base) * 3);}
+.gap-lg {gap: calc(var(--spacing-base) * 5);}
+
+.p-sm {padding: calc(var(--spacing-base) * 1);}
+.p-md {padding: calc(var(--spacing-base) * 3);}
+.p-lg {padding: calc(var(--spacing-base) * 5);}
+
+.px-sm {padding-right: calc(var(--spacing-base) * 1);padding-left: calc(var(--spacing-base) * 1);}
+.px-md {padding-right: calc(var(--spacing-base) * 3);padding-left: calc(var(--spacing-base) * 3);}
+.px-lg {padding-right: calc(var(--spacing-base) * 5);padding-left: calc(var(--spacing-base) * 5);}
+
+.py-sm {padding-top: calc(var(--spacing-base) * 1);padding-bottom: calc(var(--spacing-base) * 1);}
+.py-md {padding-top: calc(var(--spacing-base) * 3);padding-bottom: calc(var(--spacing-base) * 3);}
+.py-lg {padding-top: calc(var(--spacing-base) * 5);padding-bottom: calc(var(--spacing-base) * 5);}
+
+.m-sm {margin: calc(var(--spacing-base) * 1);}
+.m-md {margin: calc(var(--spacing-base) * 3);}
+.m-lg {margin: calc(var(--spacing-base) * 5);}
+
+.mx-sm {margin-right: calc(var(--spacing-base) * 1);margin-left: calc(var(--spacing-base) * 1);}
+.mx-md {margin-right: calc(var(--spacing-base) * 3);margin-left: calc(var(--spacing-base) * 3);}
+.mx-lg {margin-right: calc(var(--spacing-base) * 5);margin-left: calc(var(--spacing-base) * 5);}
+
+.my-sm {margin-top: calc(var(--spacing-base) * 1);margin-bottom: calc(var(--spacing-base) * 1);}
+.my-md {margin-top: calc(var(--spacing-base) * 3);margin-bottom: calc(var(--spacing-base) * 3);}
+.my-lg {margin-top: calc(var(--spacing-base) * 5);margin-bottom: calc(var(--spacing-base) * 5);}
+
+/* Typography */
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.italianno {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* User feedback */
+:root {
+  --feedback-time: 100ms;
+}
+
+.hover-scale {
+  transition: scale var(--feedback-time) ease-in-out;
+}
+.hover-scale:hover {
+  scale: 1.1;
+}
