@@ -1,23 +1,23 @@
 import { Link, Outlet } from "react-router-dom"
+import { projects } from './projectId/project'
 
 export function ProjectOverview() {
+  const projectList = Object.entries(projects)
+
   return (
     <>
       <aside>
         <nav>
           <ul>
-            <li>
-              <Link to="0001">Project 1</Link>
-            </li>
-            <li>
-              <Link to="0002">Project 2</Link>
-            </li>
-            <li>
-              <Link to="0003">Project 3</Link>
-            </li>
-            <li>
-              <Link to="0004">Project 4</Link>
-            </li>
+            {
+              projectList.map(([projectId, {name}]) => {
+                return (
+                  <li key={projectId}>
+                    <Link to={projectId}>{name}</Link>
+                  </li>
+                )
+              })
+            }
           </ul>
         </nav>
       </aside>

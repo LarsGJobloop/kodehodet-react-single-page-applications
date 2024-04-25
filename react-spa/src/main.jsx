@@ -6,6 +6,7 @@ import { AboutPage } from './routes/about/aboutPage'
 import {ContactPage} from './routes/contact/contactPage'
 import {ProjectOverview} from './routes/projects/projectOverview'
 import {ProjectDetails} from './routes/projects/projectId/projectDetails'
+import {ProjectNotFound} from './routes/projects/projectId/projectNotFound'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/projects/:projectId",
+            errorElement: <ProjectNotFound />,
             element: <ProjectDetails />
           },
         ]
