@@ -10,28 +10,42 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
+import { LayoutRoot } from './routes/layoutRoot'
+import { DefaultProjectDetails } from './routes/projects/projectId/defaultProjectDetails'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
-  },
-  {
-    path: "/about",
-    element: <AboutPage />
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />
-  },
-  {
-    path: "/projects",
-    element: <ProjectOverview />
-  },
-  {
-    path: "/projects/projectId",
-    element: <ProjectDetails />
-  },
+    element: <LayoutRoot />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      },
+      {
+        path: "/about",
+        element: <AboutPage />
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />
+      },
+      {
+        path: "/projects",
+        element: <ProjectOverview />,
+        children: [
+          {
+            index: true,
+            element: <DefaultProjectDetails />
+          },
+          {
+            path: "/projects/projectId",
+            element: <ProjectDetails />
+          },
+        ]
+      },
+    ]
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
