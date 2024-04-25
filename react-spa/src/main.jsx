@@ -12,7 +12,7 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 import { LayoutRoot } from './routes/layoutRoot'
-import { DefaultProjectDetails } from './routes/projects/projectId/defaultProjectDetails'
+import { DefaultProjectDetails } from './routes/projects/defaultProjectDetails'
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.hero {
+  padding: 0px 10em;
+  height: fit-content;
+  overflow: hidden;
+}
+.hero > img {
+  /*
+   * I have no clue why this needs to be done
+   * but without it the container for the img element
+   * is 4px to large, even though the img element
+   * itself is correctly sized. If anyones up for some
+   * research, it is possibly related to
+   * "img elements and intrinsic size"
+   */
+  margin-bottom: -4px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description div {
+  max-width: 32em;
+}

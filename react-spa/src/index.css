@@ -57,6 +57,7 @@ html {
 .items-center {align-items: center;}
 .items-end {align-items: end;}
 .text-center {text-align: center;}
+.grow {flex-grow: 1;}
 
 .gap-sm {gap: calc(var(--spacing-base) * 1);}
 .gap-md {gap: calc(var(--spacing-base) * 3);}
@@ -81,10 +82,15 @@ html {
 .mx-sm {margin-right: calc(var(--spacing-base) * 1);margin-left: calc(var(--spacing-base) * 1);}
 .mx-md {margin-right: calc(var(--spacing-base) * 3);margin-left: calc(var(--spacing-base) * 3);}
 .mx-lg {margin-right: calc(var(--spacing-base) * 5);margin-left: calc(var(--spacing-base) * 5);}
+.mx-auto {margin-right: auto;margin-left: auto;}
 
 .my-sm {margin-top: calc(var(--spacing-base) * 1);margin-bottom: calc(var(--spacing-base) * 1);}
 .my-md {margin-top: calc(var(--spacing-base) * 3);margin-bottom: calc(var(--spacing-base) * 3);}
 .my-lg {margin-top: calc(var(--spacing-base) * 5);margin-bottom: calc(var(--spacing-base) * 5);}
+
+.overflow-hidden {
+  overflow: hidden;
+}
 
 /* Typography */
 * {
@@ -98,6 +104,27 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+.underline {
+  text-decoration: underline;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+:root {
+  --text-base: 12px;
+}
+
+.text-xs {font-size: calc(var(--text-base) * 0.8);}
+.text-sm {font-size: calc(var(--text-base) * 1);}
+.text-md {font-size: calc(var(--text-base) * 3);}
+.text-lg {font-size: calc(var(--text-base) * 5);}
 
 /* User feedback */
 :root {
